@@ -1,3 +1,21 @@
+'''
+  File:  heap.py
+  Author: 
+  Date:
+  Description:  This module provides the class Heap.  We can create heaps which
+     are either largest-on-top or smallest-on-top.  We can also create heaps 
+     with a maximum number of children of our choice.  As written, the default
+     number of children is 3 and the default initial capacity is 5.  These
+     parameters can be changed by the way we invoke the class constructor.
+     
+     The module also provides the efficient heap sort method.  By default, the
+     methods sorts objects in increasing order.  But we can also sort objects
+     in decreasing order.
+     
+     Our implementation works for objects of any class that understand the
+     relational operators.
+
+'''
 testing = False
 from person import Person
 import math
@@ -64,7 +82,12 @@ class Heap:
         understands the comparison operators. The elements of
         aSequence are copied into the heap and ordered to build
         a heap. '''
-    pass
+    for x in range(len(aSequence)):
+      self.data[x] = aSequence[x]
+    
+    loop_counter = 1
+    while self.data[loop_counter] != None:
+      pass
 
   def removeTop(self):
     '''  If the heap is not empty, remove the top element
